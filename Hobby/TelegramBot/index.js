@@ -1133,7 +1133,7 @@ telegraf.command('getPicturesAnTumblrByAuthor'.toLowerCase(), async function sen
     telegraf.command('temp', async function getTemp(item) {
         try {
             if (item.message.text.split(" ").length == 1) item.telegram.sendMessage(item.chat.id, "Error: missing name place");
-            let request_url = "https://api.openweathermap.org/data/2.5/weather?q=" + `${item.message.text.substring(5, item.message.text.length).trim()}` + ",by&appid=2b84f94bf10cf779b4a961dc64a0d585&units=metric";
+            let request_url = "https://api.openweathermap.org/data/2.5/weather?q=" + `${item.message.text.substring(5, item.message.text.length).trim()}` + ",by&appid=process.env.WEATHER_TOKEN&units=metric";
             const response = await fetch(request_url);
             let data = await response.json();
 
@@ -1153,7 +1153,7 @@ telegraf.command('getPicturesAnTumblrByAuthor'.toLowerCase(), async function sen
         try {
             if (item.message.text.split(' ').length == 1) item.telegram.sendMessage(item.chat.id, "Error: missing name place");
             let nameCity = item.message.text.substring(6, item.message.text.length).trim();
-            let url = `https://api.openweathermap.org/data/2.5/forecast?q=${nameCity},by&appid=2b84f94bf10cf779b4a961dc64a0d585&units=metric`;
+            let url = `https://api.openweathermap.org/data/2.5/forecast?q=${nameCity},by&appid=process.env.WEATHER_TOKEN&units=metric`;
             await fetch(url).then(async response => await response.json()).then(async data => {
                 if (data.cod == 400) item.telegram.sendMessage(item.chat.id, `<pre>Error: bad request</pre>`, { parse_mode: 'HTML' });
                 for (let i = 0; i < data.list.length; i++) {

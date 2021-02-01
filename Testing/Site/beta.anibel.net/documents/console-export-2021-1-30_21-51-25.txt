@@ -1,0 +1,121 @@
+
+21:50:21.499 Feature Policy: Skipping unsupported feature name “autoplay”. desktop.js:140:11678
+21:50:21.550 Feature Policy: Skipping unsupported feature name “autoplay”. dororo:180:34
+21:50:22.372 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:22.372 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:22.372 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:22.372 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:22.384 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:22.384 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:22.384 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:22.384 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:22.397 This page uses the non standard property “zoom”. Consider using calc() in the relevant property values, or using “transform” along with “transform-origin: 0 0”. preview
+21:50:22.468 Some cookies are misusing the recommended “SameSite“ attribute 2
+21:50:22.576 The Components object is deprecated. It will soon be removed. preview
+21:50:23.636 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.636 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.636 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.636 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.645 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.645 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.645 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.645 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.772 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.773 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.773 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.773 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.773 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.777 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:23.778 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:23.778 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:23.778 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:23.778 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:24.738 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:24.738 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:24.738 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:24.743 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:24.743 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:24.743 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:24.743 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:24.744 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:24.744 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:24.744 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:25.257 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:25.257 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:25.257 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:25.515 Content Security Policy: Ignoring “'report-sample'” within script-src: ‘strict-dynamic’ specified
+21:50:25.515 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:25.515 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:25.515 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:25.516 Content Security Policy: Ignoring “'unsafe-inline'” within script-src: ‘strict-dynamic’ specified
+21:50:25.516 Content Security Policy: Ignoring “http:” within script-src: ‘strict-dynamic’ specified
+21:50:25.516 Content Security Policy: Ignoring “https:” within script-src: ‘strict-dynamic’ specified
+21:50:25.771 The Components object is deprecated. It will soon be removed. proxy.html
+21:50:26.225 The Components object is deprecated. It will soon be removed. postmessageRelay
+21:50:26.571 XHRPOSThttps://clients6.google.com/drive/v2internal/viewerimpressions?key=AIzaSyC1eQ1xj69IdTMeii5r7brs3R90eck-m7k&alt=json
+[HTTP/2 401 Unauthorized 217ms]
+
+21:50:26.573 XHRPOSThttps://clients6.google.com/drive/v2internal/viewerimpressions?key=AIzaSyC1eQ1xj69IdTMeii5r7brs3R90eck-m7k&alt=json
+[HTTP/2 401 Unauthorized 216ms]
+
+21:50:26.882 Uncaught 
+{…}
+​
+body: "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"global\",\n    \"reason\": \"missingCookie\",\n    \"message\": \"Invalid Credentials\",\n    \"locationType\": \"header\",\n    \"location\": \"Cookie\"\n   }\n  ],\n  \"code\": 401,\n  \"message\": \"Invalid Credentials\"\n }\n}\n"
+​
+headers: {…}
+​​
+"cache-control": "private, max-age=0"
+​​
+"content-encoding": "gzip"
+​​
+"content-length": "158"
+​​
+"content-type": "application/json; charset=UTF-8"
+​​
+date: "Sat, 30 Jan 2021 18:50:27 GMT"
+​​
+expires: "Sat, 30 Jan 2021 18:50:27 GMT"
+​​
+server: "GSE"
+​​
+vary: "Origin, X-Origin"
+​​
+"www-authenticate": "Bearer realm=\"https://accounts.google.com/\""
+​​
+<prototype>: Object { … }
+​
+result: {…}
+​​
+error: {…}
+​​​
+code: 401
+​​​
+errors: Array [ {…} ]
+​​​
+message: "Invalid Credentials"
+​​​
+<prototype>: Object { … }
+​​
+<prototype>: Object { … }
+​
+status: 401
+​
+statusText: "Unauthorized"
+​
+<prototype>: Object { … }
+m=v:8:273
