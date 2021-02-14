@@ -33,7 +33,7 @@
 >required	
 > __The value must be client_credentials__
 
-Запрос на получения токена отслается на ` https://www.deviantart.com/oauth2/token`
+Запрос на получения токена отсылается на ` https://www.deviantart.com/oauth2/token`
 
 ### 5. Заполненая вкладка Autorization в Postman  имеет вид
 ![](./img/id_4.png)
