@@ -440,6 +440,144 @@ telegraf.command('getPicturesAnDeviantArtbyTag'.toLowerCase(), async function ge
 
 //<============================================================================================================================================>
 
+telegraf.command('getPicturesAnDeviantArtbyHot'.toLowerCase(), async function getData(item) {
+
+    let image_url = [];
+    let title = [];
+    let author = [];
+    let post_url = [];
+    let image_size;
+    let offset;
+
+    if (item.message.text.split(" ").length == 1) offset = 0;
+    if (item.message.text.split(" ").length == 2) offset = item.message.text.substring(29, item.message.text.length).trim();
+
+    const response = await fetch(`https://www.deviantart.com/oauth2/token?client_id=${process.env.DEVIANT_ART_CLIENT_ID}&client_secret=${process.env.DEVIANT_ART_CLIENT_SECRET}&grant_type=client_credentials`); //get temporary token
+    const token = await response.json();
+    let url = `https://www.deviantart.com/api/v1/oauth2/browse/hot?offset=${offset}&limit=50&mature_content=true&access_token=${token.access_token}`
+
+    await fetch(url).then(async response => await response.json()).then(async data => {
+        if (data.results.length == 0) item.telegram.sendMessage(item.chat.id, "Пошук не даў вынікаў")
+
+        for (let i = 0; i < data.results.length; i++) {
+
+            if (data.results[i].hasOwnProperty('videos')){
+                await item.telegram.sendChatAction(item.chat.id, 'upload_video');
+                await item.telegram.sendMessage(item.chat.id, `<a href="${data.results[i].videos[data.results[i].videos.length - 1].src}">${data.results[i].author.username} — ${data.results[i].title}</a>`, {parse_mode: 'HTML'});
+                console.log(data.results[i].videos[0].src)
+                continue
+            }
+
+            if (data.results[i].content.src.includes('gif')) {
+                item.telegram.sendChatAction(item.chat.id, 'upload_document');
+                await item.telegram.sendMessage(item.chat.id, `<a href = "${data.results[i].content.src}">${data.results[i].author.username} — ${data.results[i].title}</a>`, { parse_mode: 'HTML' });
+                continue;
+            }
+
+            
+            if(data.results[i].content != undefined){
+            let head = await fetch(data.results[i].content.src, {method: 'HEAD'})
+            image_size = head.headers.get('content-length');
+            }
+
+            if (parseInt(image_size, 10) > 5000000) {
+                item.telegram.sendChatAction(item.chat.id, 'upload_document');
+                await item.telegram.sendMessage(item.chat.id, `<a href ="${data.results[i].url}">${data.results[i].author.username} — ${data.results[i].title}</a>\n<a href = "${data.results[i].content.src}">\n\n❗❕❗Тэлеграм не падтрымлівае перадачу файла перавышаючага 5МБ❗❕❗</a>`, { parse_mode: 'HTML' });
+                continue;
+            }
+
+            image_url.push(data.results[i].content.src);
+            title.push(data.results[i].title.replace(new RegExp(/[\[\]]/gm), ''));
+            author.push(data.results[i].author.username);
+            post_url.push(data.results[i].url);
+        }
+
+        if (image_url.length > 10) {
+            for (; 0 < image_url.length;) {
+                if(image_url.length < 10) break;
+                item.telegram.sendChatAction(item.chat.id, 'upload_photo');
+                await item.telegram.sendMediaGroup(item.chat.id, [
+                    {
+                        type: 'photo',
+                        parse_mode: 'Markdown',
+                        caption: `[${author.shift()} — ${title.shift()}](${post_url.shift()})`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'Markdown',
+                        caption: `[${author.shift()} — ${title.shift()}](${post_url.shift()})`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    },
+                    {
+                        type: 'photo',
+                        parse_mode: 'HTML',
+                        caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`,
+                        media: image_url.shift()
+                    }
+                ]).catch(err => { console.log(err.message); return })
+            }
+        }
+        if (image_url.length < 10 && image_url.length > 0) {
+            for (; 0 < image_url.length;) {
+                item.telegram.sendChatAction(item.chat.id, 'upload_photo');
+                await item.telegram.sendPhoto(item.chat.id, image_url.shift(), {
+                    parse_mode: 'HTML',
+                    caption: `<a href="${post_url.shift()}">${author.shift()} — ${title.shift()}</a>`
+                });
+            }
+        }
+    })
+        .catch(err => console.log(err.message))
+
+})
+
+//<============================================================================================================================================>
+
+
+
 
 telegraf.command('getPicturesAnDeviantArtByAuthor'.toLowerCase(), async function sendData(item) {
 
@@ -1114,6 +1252,7 @@ telegraf.command('getPicturesAnTumblrByAuthor'.toLowerCase(), async function sen
             '/getpicturesanartstationbyauthor <i>nameAuthor</i> — вяртае апошнія работы аўтара на ArtStation\n  <pre>[Напрыклад: /getpicturesanartstationbyauthor asuka111]</pre> \n\n' +
             '/getpicturesandeviantartbyauthor <i>nameAuthor</i> — вертае апошнія работы аўтара на DeviantArt\n    <pre>[Напрыклад: /getpicturesandeviantartbyauthor asuka111]</pre> \n\n' +
             '/getpicturesandeviantartbytag <i>tag</i> — вяртае апошнія работы па тэгу на DevianArt \n   <pre>[Напрыклад: /getpicturesandeviantartbytag asuka]</pre>\n\n' +
+			'/getpicturesandeviantartbyhot <i>tag</i> — вяртае гарачыя работы на DevianArt \n   <pre>[Напрыклад: /getpicturesandeviantartbyhot 13]</pre>\n\n' +
             '/getpicturesantumblbytag <i>tag</i> — вяртае работы па тэгу на Tumblr\n<pre>[Напрыклад: /getpicturesantumblbytag asuka]</pre>\n\n'+
             '/getPicturesandeviantartbydailydeviations <i>ГГГГ-ММ-ДзДз</i> — вяртае штодзенную падборку работ аўтараў на DeviantArt\n   <pre>[Напрыклад: /getpicturesandeviantartbydailydeviations 2021-01-13]</pre>\n\n' +
             '/getpicturesantumblrbyauthor <i>nameAuthor</i> — верне апошнія работы аўтара на Tumblr \n    <pre>[Напрыклад: /getpicturesantumblrbyauthor asuka111]</pre> \n', { parse_mode: 'HTML' }).catch(err => console.log(err.message));
