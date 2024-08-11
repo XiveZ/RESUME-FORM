@@ -1,11 +1,11 @@
-body{
-	padding: 0;
+body {
+    padding: 0;
     margin: 0;
     display: block;
     height: 100%;
 }
 
-.page{
+.page {
     min-height: 100%;
     position: relative;
 }
@@ -16,11 +16,11 @@ html {
     overflow-y: auto;
 }
 
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
-ul{
+ul {
     width: 15vw;
     word-wrap: break-word;
     max-width: 28vh;
@@ -29,7 +29,7 @@ ul{
     padding-left: 1vh;
 }
 
-.right_line>ul{
+.right_line>ul {
     margin: 0;
     padding-left: 8vw;
     position: relative;
@@ -37,7 +37,7 @@ ul{
     text-align: left;
 }
 
-h1{
+h1 {
     text-align: left;
     padding-left: 4vw;
     z-index: 1;
@@ -47,7 +47,7 @@ h1{
     font-weight: bold;
 }
 
-h2{
+h2 {
 
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,7 +56,7 @@ h2{
 }
 
 
-h3{
+h3 {
     position: relative;
     color: #fd8c70;
     text-align: left;
@@ -64,7 +64,7 @@ h3{
     font-weight: 300;
 }
 
-h4{
+h4 {
     padding-left: 8vw;
     margin: 0;
     max-width: 80%;
@@ -74,11 +74,11 @@ h4{
 
 }
 
-.left_line ul{
+.left_line ul {
     padding-left: 2vw;
 }
 
-.left_line{
+.left_line {
     float: left;
     position: relative;
     min-height: 100%;
@@ -90,11 +90,13 @@ h4{
     grid-template-rows: -1fr 0vh 0fr;
 }
 
-.left_line>h2, .left_line>ul, .left_line>li{
+.left_line>h2,
+.left_line>ul,
+.left_line>li {
     z-index: 1;
 }
 
-.right_line{
+.right_line {
     top: 8vh;
     float: right;
     position: relative;
@@ -103,7 +105,22 @@ h4{
     position: relative;
 }
 
-.avatar{
+.present_company {
+    max-width: 100%;
+    width: 100%;
+}
+
+.working {
+    padding: 0;
+    display: block;
+    margin: auto;
+    position: relative;
+    height: auto;
+    position: relative;
+    width: 80%;
+}
+
+.avatar {
     position: relative;
     z-index: 1;
     vertical-align: bottom;
@@ -113,7 +130,7 @@ h4{
     border-radius: 50%;
 }
 
-.line1{
+.line1 {
     position: absolute;
     background-color: #3B4358;
     height: 30vh;
@@ -123,7 +140,7 @@ h4{
     transform: rotate(-30deg);
 }
 
-.line2{
+.line2 {
     top: -25vh;
     position: absolute;
     margin: 0 auto;
@@ -133,7 +150,7 @@ h4{
     background-color: #D0826F;
 }
 
-.line3{
+.line3 {
     bottom: -10vh;
     right: 0;
     background-color: rgb(255, 173, 140);
@@ -146,13 +163,13 @@ h4{
 
 }
 
-.line3>h5{
+.line3>h5 {
     color: white;
     padding-right: 5%;
     transform: rotate(25deg);
 }
 
-.subline{
+.subline {
     width: 90%;
     position: relative;
     margin: 2vh auto 2vh;
@@ -160,7 +177,7 @@ h4{
     background: #DFE0E0;
 }
 
-.right_line>h2{
+.right_line>h2 {
     margin-top: 4vh;
     margin-left: 4vw;
     color: #fd8c70;
@@ -170,6 +187,6 @@ h4{
 
 }
 
-.right_line>h3{
+.right_line>h3 {
     margin-left: 8vw;
 }
